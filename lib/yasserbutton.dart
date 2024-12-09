@@ -4,7 +4,8 @@ class Yasserbutton extends StatelessWidget {
   final String btext;
   final Color buttoncolor;
   final Color textcolor;
-  const Yasserbutton({super.key, required this.btext, required this.buttoncolor, required this.textcolor});
+  final VoidCallback onPressed;
+  const Yasserbutton({super.key, required this.btext, required this.buttoncolor, required this.textcolor, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +20,8 @@ class Yasserbutton extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                 ),
                 color:buttoncolor,
-                onPressed: (){
-
-              },child: 
+                onPressed: onPressed,
+                child: 
                Text(btext,style: TextStyle(color: textcolor),
                ),
                ),

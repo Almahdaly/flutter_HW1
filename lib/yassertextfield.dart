@@ -4,7 +4,8 @@ class Yassertextfield extends StatelessWidget {
   final String hint;
   final IconData texticon;
   final TextInputType texttype;
-  const Yassertextfield({super.key, required this.hint, required this.texticon, required this.texttype});
+  final TextEditingController controller;
+  const Yassertextfield({super.key, required this.hint, required this.texticon, required this.texttype, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,7 @@ class Yassertextfield extends StatelessWidget {
       child: SizedBox(
         width: 400,
         child: TextField(
+        controller: controller,
         keyboardType: texttype,
         decoration: InputDecoration(
           labelText: hint,
