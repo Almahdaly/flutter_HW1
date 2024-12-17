@@ -10,12 +10,12 @@ class Yasserbutton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Padding(padding: EdgeInsets.symmetric(vertical: 5),
+      child: Padding(padding: const EdgeInsets.symmetric(vertical: 5),
       child: SizedBox(
         width: 200,
         height: 50,
         child: MaterialButton(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5),
                 ),

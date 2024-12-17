@@ -5,12 +5,13 @@ class Yassertextfield extends StatelessWidget {
   final IconData texticon;
   final TextInputType texttype;
   final TextEditingController controller;
-  const Yassertextfield({super.key, required this.hint, required this.texticon, required this.texttype, required this.controller});
+  final bool obscureText;
+  const Yassertextfield({super.key, required this.hint, required this.texticon, required this.texttype, required this.controller, this.obscureText=false});
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Padding(padding: EdgeInsets.symmetric(vertical: 5),
+      child: Padding(padding: const EdgeInsets.symmetric(vertical: 5),
       child: SizedBox(
         width: 400,
         child: TextField(
@@ -19,11 +20,12 @@ class Yassertextfield extends StatelessWidget {
         decoration: InputDecoration(
           labelText: hint,
           icon: Icon(texticon),
-          border: OutlineInputBorder(),
+          border: const OutlineInputBorder(),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
           ),
         ),
+        obscureText: obscureText,
       ),
       ),
                ),
